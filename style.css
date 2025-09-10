@@ -4,10 +4,21 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #030013;
   color: #fbfbfb;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 4%;
 }
 
 button {
@@ -34,6 +45,11 @@ header {
     text-decoration: none;
     cursor: pointer;
     color: #fbfbfb;
+    opacity: 0.8;
+    transition: all 0.5s;
+    &:hover {
+      opacity: 1;
+    }
   }
 
   & img {
@@ -55,12 +71,6 @@ header {
   }
 }
 
-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 .section-1 {
   background-image: url("assets/world.png");
   background-size: cover;
@@ -72,13 +82,16 @@ section {
     font-size: 14vw;
     color: #585858;
     mix-blend-mode: color-dodge;
+    z-index: 10;
   }
   & h1 {
     font-size: 48px;
     text-align: center;
     font-weight: 500;
+    z-index: 10;
   }
   & .conteudo-principal {
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,6 +128,94 @@ section {
       color: white;
       backdrop-filter: blur(8px);
       padding: 6px 16px;
+    }
+  }
+}
+
+.section-title {
+  font-size: 64px;
+  font-weight: 500;
+}
+
+.section-2 {
+  position: relative;
+  background-image: url("assets/background.png");
+  background-position: center;
+  align-items: center;
+  & .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 64px 0 120px;
+    & .card {
+      max-width: 450px;
+      height: 250px;
+      padding: 12px;
+      & img {
+        width: 64px;
+        color: white;
+        background-color: #7067fa;
+        padding: 12px;
+        border-radius: 50px;
+      }
+      & h3 {
+        font-size: 24px;
+        font-weight: 500;
+        margin: 20px 0 4px;
+      }
+      & p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+    & .branco {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+    }
+  }
+}
+
+.section-1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(#02011300, #02011300, #020113);
+}
+
+.section-2::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#020113, #02011300, #020113);
+}
+
+.section-title,
+.cards {
+  z-index: 10;
+}
+
+.imagens {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0 120px;
+  gap: 0.5vw 0.5%;
+  & img {
+    max-width: 30%;
+    filter: saturate(0);
+    transition: all 0.5s;
+    &:hover {
+      filter: saturate(1);
     }
   }
 }
