@@ -4,26 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML & CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <img src="/assets/html.svg" alt="logotipo do site" />
+      <img src="assets/html.svg" alt="logotipo do site" />
       <nav>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Serviços</a></li>
-        <li><a href="#">Trabalhos</a></li>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Trabalhos</a></li>
+        </ul>
       </nav>
     </header>
     <!-- Seção 1 -->
-    <section>
+    <section class="section-1">
       <h2>html & css</h2>
-      <h1>Mateus da Silveira</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid</p>
-      <div>
-        <button>
-          Orçamento Gratuito <img src="assets/arrow-top-right.svg" alt="ir" />
-        </button>
-        <button>Entrar em contato</button>
+      <div class="conteudo-principal">
+        <h1>Mateus da Silveira</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid</p>
+        <div class="conteudo-botoes">
+          <button class="orcamento">
+            Orçamento Gratuito <img src="assets/arrow-top-right.svg" alt="ir" />
+          </button>
+          <button class="contato">Entrar em contato</button>
+        </div>
       </div>
     </section>
     <!-- seção 2 -->
